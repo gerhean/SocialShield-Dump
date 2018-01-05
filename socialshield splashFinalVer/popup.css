@@ -1,0 +1,17 @@
+body {
+  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+  font-size: 100%;
+  padding: 25px;
+  width: 600px;
+  background-color: lightgrey;
+}
+
+td{
+	font-weight: bold;
+}
+
+/*table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}*/

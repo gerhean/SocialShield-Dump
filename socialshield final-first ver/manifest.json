@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "SocialShield",
+  "description": "Protection against dangerous content online",
+  "version": "1.0",
+  "background": { "scripts": ["background.js"] },
+  "content_scripts": [
+    { 
+      "matches": ["https://twitter.com/*"],
+      "js": ["jquery-3.1.0.min.js", "jquery.foggy.min.js", "TwitterCheck.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_title": "A shield thingy",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": ["swearWords.json"],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "https://loklak.org/*",
+    "https://api.twitter.com/*"
+  ]
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <title>Popup</title>
+  <link href="popup.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="library/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-primary" style="margin-bottom:20px;">SocialShield</h1>
+    <div id="unauthorized">
+      <h2 class="text-warning">Authorise with Twitter</h2>
+      <button id="signIn" class="btn btn-outline-primary">Sign In</button>
+    </div>
+
+    <div id="authorized">
+      <button id="signOut" class="btn btn-outline-warning">Sign out</button>
+    </div>
+    <button id="toggleExplanations" class="btn btn-outline-primary" style="margin-top:20px">Show Explanation for Danger Levels</button>
+    <div id="explanations" style="display:none; margin-top: 20px;">
+      <h3 class="text-primary">Danger Levels</h3>
+      <table class="table table-bordered" style="margin-top: 20px">
+        <thead class="thead-inverse">
+          <tr>
+            <th>Level</th>
+            <th>Explanation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background-color: limegreen">
+            <td>1</td>
+            <td>Page is safe</td>
+          </tr>
+          <tr style="background-color: orange">
+            <td>2</td>
+            <td>Page is generally safe, however, inappropriate content may be present</td>
+          </tr>
+          <tr style="background-color: darkorange">
+            <td>3</td>
+            <td>Page has moderate risk of inappropriate / offensive content, viewer's discretion is advised</td>
+          </tr>
+          <tr style="background-color: tomato">
+            <td>4</td>
+            <td>Page has high risk of inappropriate / offensive content, returning to previous page is recommended</td>
+          </tr>
+          <tr style="background-color: red">
+            <td>5</td>
+            <td>Page has inappropriate / offensive content, highly recommended not to proceed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h4 class="text-primary" style="margin-top:20px;">You have used Twitter for</h4>
+    <div id="minuteTimer">
+      <text>dont have</text>
+    </div>
+  </div>
+  <script type="text/javascript" src="library/jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src="popup.js"></script>
+</body>
+</html>
+
